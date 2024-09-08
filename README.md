@@ -1,11 +1,17 @@
 # Projeto Customers API
 
-Este projeto é uma API para gerenciamento de clientes, com validação de entrada e estruturação de dados.
+API para gerenciamento de clientes.
 
 ## Pré-requisitos
 
 - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) ou superior
 - [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+
+
+
+# MER (Modelo Entidade Relacionamento)
+
+
 
 ## Configuração do Projeto
 
@@ -106,7 +112,7 @@ Response:
 
 ## Clean Architecture
 
-O projeto segue a **Clean Architecture**, que ajuda a manter a separação clara entre diferentes camadas do sistema. Isso inclui:
+O projeto segue a **Clean Architecture** com o propósito de manter uma separação clara de responsabilidade do sistema nas seguintes camadas:
 
 - **Camada de Domínio**: Contém a lógica de negócios e entidades.
 - **Camada de Aplicação**: Contém os casos de uso e lógica de aplicação.
