@@ -74,7 +74,7 @@ curl --location 'localhost:5242/api/customer' \
 
 ```
 
-O primeiro email da lista de emails, e o primeiro endereco da lista de endereços, serão respectivamente o email principal e endereço principal atrelado ao cliente.
+O primeiro email da lista de emails, e o primeiro endereço da lista de endereços, serão respectivamente o email principal e endereço principal atrelado ao cliente.
 
 # 2. GET /api/customers (paginação)
 Obtém a lista de clientes.
