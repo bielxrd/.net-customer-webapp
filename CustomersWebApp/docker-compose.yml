@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:latest
+    container_name: sql-server
+    environment:
+        - ACCEPT_EULA=y
+        - SA_PASSWORD=xp@ncuifgjbdrshjk1
+    ports:
+       - "1434:1433"
