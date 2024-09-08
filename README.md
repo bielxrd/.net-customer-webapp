@@ -109,7 +109,9 @@ Response:
 #### 200 OK: Retorna os detalhes do cliente.
 #### 404 Not Found: Retorna erro se o cliente com o ID especificado não for encontrado.
 
-## Clean Architecture
+## Pattern utilizado
+
+### Clean Architecture
 
 O projeto segue a **Clean Architecture** com o propósito de manter uma separação clara de responsabilidade do sistema nas seguintes camadas:
 
@@ -118,7 +120,7 @@ O projeto segue a **Clean Architecture** com o propósito de manter uma separaç
 - **Camada de Infraestrutura**: Acesso ao banco de dados.
 - **Camada de Apresentação**: Contém as controllers.
 
-## SOLID
+### SOLID
 
 O projeto aplica os seguintes princípios SOLID:
 
