@@ -9,16 +9,15 @@ API para gerenciamento de clientes.
 
 
 
-# MER (Modelo Entidade Relacionamento)
+## MER (Modelo Entidade Relacionamento)
 
-
+![Customers-MER](https://github.com/user-attachments/assets/81ec82a4-d11c-4960-9f69-3286780fb0b2)
 
 ## Configuração do Projeto
 
 ### Clonando o Repositório
 
-1. **Clone o repositório** usando o Git. Abra o terminal (ou prompt de comando) e execute:
-
+1. **Clone o repositório** 
    ```bash
    git clone https://github.com/seu-usuario/seu-repositorio.git
    ```
@@ -41,7 +40,6 @@ Selecione o arquivo customers-api.sln
 ```
 docker-compose up-d
 ```
-
 
 # Rodar o projeto em http preferencialmente
 
@@ -76,7 +74,7 @@ curl --location 'localhost:5242/api/customer' \
 
 ```
 
-# 2. GET /api/customers
+# 2. GET /api/customers (paginação)
 Obtém a lista de clientes.
 
 ## Query Parameters:
@@ -84,12 +82,14 @@ Obtém a lista de clientes.
 ### pageNumber (opcional): Número da página para paginação.
 ### pageSize (opcional): Tamanho da página para paginação.
 
+Caso não seja informado os paramêtros pageNumber e pageSize, o valor padrão será, respectivamente, 1 e 5.
+
 ```
 curl --location 'localhost:5242/api/customer?pageNumber=1&pageSize=5'
 ```
 Response:
 
-#### 200 OK: Retorna uma lista de clientes com detalhes.
+#### 200 OK: Retorna uma lista de clientes com paginação.
 
 # 3. GET /api/customers/{id}
 Obtém os detalhes de um cliente específico pelo ID.
@@ -98,12 +98,11 @@ Obtém os detalhes de um cliente específico pelo ID.
 
 #### id: ID do cliente.
 
-
 ```
 curl --location 'localhost:5242/api/customer/011ffbb7-6470-4685-bc60-a8137799ff02'
 ```
 
-obs: substituia o id pelo seu id do seu cliente cadastrado.
+obs: substituia o id pelo id do seu cliente.
 
 Response:
 
@@ -114,9 +113,9 @@ Response:
 
 O projeto segue a **Clean Architecture** com o propósito de manter uma separação clara de responsabilidade do sistema nas seguintes camadas:
 
-- **Camada de Domínio**: Contém a lógica de negócios e entidades.
-- **Camada de Aplicação**: Contém os casos de uso e lógica de aplicação.
-- **Camada de Infraestrutura**: Contém a implementação dos detalhes de acesso a dados e.
+- **Camada de Domínio**: Lógica de negócios e entidades.
+- **Camada de Aplicação**: Casos de uso e lógica de aplicação.
+- **Camada de Infraestrutura**: Acesso ao banco de dados.
 - **Camada de Apresentação**: Contém as controllers.
 
 ## SOLID
