@@ -21,10 +21,30 @@ Este projeto é uma API para gerenciamento de clientes, com validação de entra
 Selecione o arquivo customers-api.sln
 
 
-Rotas da API
+### Rodar comando docker para criação do banco de dados
+
+
+
+1. **Acessar a pasta da Web Application**
+
+```
+   cd .\CustomersWebApp\
+```
+
+2. **Rodar comando docker**
+```
+docker-compose up-d
+```
+
+
+# Rodar o projeto em http preferencialmente
+
+obs: a API cria para você o database automaticamente.
+
+## Rotas da API
 A API possui as seguintes rotas principais:
 
-# 1. POST /api/customers
+### 1. POST /api/customers
 Cria um novo cliente.
 
 ```
